@@ -1,0 +1,36 @@
+{% load static %}
+
+<header>
+    <div class="logo">
+        <img src="{% static 'images/static.png' %}" alt="StreamVibe Logo">
+    </div>
+    <ul class="nav-links">
+        <li>
+            <a href="{% url 'index' %}"
+               class="{% if request.path == '/' %}active{% endif %}">
+                Home
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                Movies & Shows
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'list' %}"
+               class="{% if request.path == '/list/' %}active{% endif %}">
+                List
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'account' %}"
+               class="{% if request.path == '/account/' %}active{% endif %}">
+                Account
+            </a>
+        </li>
+    </ul>
+    <div class="icons">
+        <img src="{% static 'images/search-icon.png' %}" alt="Search Icon" class="header-icon">
+        <img src="{% static 'images/user-icon.png' %}" alt="User Icon" class="header-icon">
+    </div>
+</header>

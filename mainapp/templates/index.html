@@ -1,0 +1,242 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <section class="hero">
+        <div class="overlay">
+            <div class="play-icon">
+                <img src="{% static 'images/static.png' %}" alt="Play Icon">
+            </div>
+            <h1>The Best Streaming Experience</h1>
+            <p>StreamVibe is the best streaming experience for watching your favorite movies and shows on demand,
+                anytime, anywhere.
+                With StreamVibe, you can enjoy a wide variety of content, including the latest blockbusters, classic
+                movies, popular TV shows, and more.
+                You can also create your own watchlists, so you can easily find the content you want to watch.
+            </p>
+            <a href="#" class="cta-button">Start Watching Now</a>
+        </div>
+    </section>
+
+    <section class="categories">
+        <h2>Explore our wide variety of categories</h2>
+        <p>Whether you're looking for a comedy to make you laugh, a drama to make you think, or a documentary to learn
+            something new</p>
+
+        <div class="categories-container">
+            <div class="category-card">
+                <div class="category-images">
+                    <img src="{% static 'images/static.png' %}" alt="Action Movie 1">
+                    <img src="{% static 'images/static.png' %}" alt="Action Movie 2">
+                    <img src="{% static 'images/static.png' %}" alt="Action Movie 3">
+                    <img src="{% static 'images/static.png' %}" alt="Action Movie 4">
+                </div>
+                <div class="category-title">
+                    <h3>Action</h3>
+                    <span>&rarr;</span>
+                </div>
+            </div>
+
+            <div class="category-card">
+                <div class="category-images">
+                    <img src="{% static 'images/static.png' %}" alt="Adventure Movie 1">
+                    <img src="{% static 'images/static.png' %}" alt="Adventure Movie 2">
+                    <img src="{% static 'images/static.png' %}" alt="Adventure Movie 3">
+                    <img src="{% static 'images/static.png' %}" alt="Adventure Movie 4">
+                </div>
+                <div class="category-title">
+                    <h3>Adventure</h3>
+                    <span>&rarr;</span>
+                </div>
+            </div>
+
+            <div class="category-card">
+                <div class="category-images">
+                    <img src="{% static 'images/static.png' %}" alt="Comedy Movie 1">
+                    <img src="{% static 'images/static.png' %}" alt="Comedy Movie 2">
+                    <img src="{% static 'images/static.png' %}" alt="Comedy Movie 3">
+                    <img src="{% static 'images/static.png' %}" alt="Comedy Movie 4">
+                </div>
+                <div class="category-title">
+                    <h3>Comedy</h3>
+                    <span>&rarr;</span>
+                </div>
+            </div>
+
+            <div class="category-card">
+                <div class="category-images">
+                    <img src="{% static 'images/static.png' %}" alt="Drama Movie 1">
+                    <img src="{% static 'images/static.png' %}" alt="Drama Movie 2">
+                    <img src="{% static 'images/static.png' %}" alt="Drama Movie 3">
+                    <img src="{% static 'images/static.png' %}" alt="Drama Movie 4">
+                </div>
+                <div class="category-title">
+                    <h3>Drama</h3>
+                    <span>&rarr;</span>
+                </div>
+            </div>
+
+            <div class="category-card">
+                <div class="category-images">
+                    <img src="{% static 'images/static.png' %}" alt="Horror Movie 1">
+                    <img src="{% static 'images/static.png' %}" alt="Horror Movie 2">
+                    <img src="{% static 'images/static.png' %}" alt="Horror Movie 3">
+                    <img src="{% static 'images/static.png' %}" alt="Horror Movie 4">
+                </div>
+                <div class="category-title">
+                    <h3>Horror</h3>
+                    <span>&rarr;</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Devices Section -->
+    <section class="devices">
+        <h2>We Provide you streaming experience across various devices.</h2>
+        <p>With StreamVibe, you can enjoy your favorite movies and TV shows anytime, anywhere. Our platform is designed
+            to be compatible with a wide range of devices, ensuring that you never miss a moment of entertainment.</p>
+
+        <div class="devices-container">
+            <div class="device-card">
+                <img src="{% static 'images/static.png' %}" alt="Smartphone Icon">
+                <h3>Smartphones</h3>
+                <p>StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play
+                    Store or the Apple App Store.</p>
+            </div>
+
+            <div class="device-card">
+                <img src="{% static 'images/static.png' %}" alt="Tablet Icon">
+                <h3>Tablets</h3>
+                <p>StreamVibe is optimized for tablets. Download our app from the Google Play Store or the Apple App
+                    Store.</p>
+            </div>
+
+            <div class="device-card">
+                <img src="{% static 'images/static.png' %}" alt="Smart TV Icon">
+                <h3>Smart TV</h3>
+                <p>StreamVibe is compatible with a variety of Smart TVs. Download our app directly from your TV's app
+                    store.</p>
+            </div>
+
+            <div class="device-card">
+                <img src="{% static 'images/static.png' %}" alt="Laptops Icon">
+                <h3>Laptops</h3>
+                <p>StreamVibe is optimized for laptops. Access StreamVibe from any web browser or download our app for
+                    your desktop.</p>
+            </div>
+
+            <div class="device-card">
+                <img src="{% static 'images/static.png' %}" alt="Gaming Consoles Icon">
+                <h3>Gaming Consoles</h3>
+                <p>StreamVibe works with most gaming consoles. Download the app from your console's app store.</p>
+            </div>
+
+            <div class="device-card">
+                <img src="{% static 'images/static.png' %}" alt="VR Headsets Icon">
+                <h3>VR Headsets</h3>
+                <p>Experience StreamVibe in VR! Download our app from the Google Play Store or the Apple App Store for a
+                    fully immersive experience.</p>
+            </div>
+        </div>
+    </section>
+        <section id="faq" class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <p>Got questions? We've got answers! Check out our FAQ section to find answers to the most common questions
+                about StreamVibe.</p>
+            <div class="faq-container">
+                <div class="faq-item" onclick="toggleAnswer(1)">
+                    <div class="faq-question">
+                        <h3>What is StreamVibe?</h3>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer" id="answer-1">
+                        StreamVibe is a streaming service that allows you to watch movies and shows on demand.
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleAnswer(2)">
+                    <div class="faq-question">
+                        <h3>How much does StreamVibe cost?</h3>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer" id="answer-2">
+                        StreamVibe offers various subscription plans starting at $9.99 per month.
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleAnswer(3)">
+                    <div class="faq-question">
+                        <h3>What content is available on StreamVibe?</h3>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer" id="answer-3">
+                        StreamVibe offers a wide range of movies, shows, and exclusive content.
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleAnswer(4)">
+                    <div class="faq-question">
+                        <h3>How can I watch StreamVibe?</h3>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer" id="answer-4">
+                        You can watch StreamVibe on any device including smartphones, tablets, and smart TVs.
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="faq-button">Ask a Question</a>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="pricing-section">
+            <h2>Choose the plan that's right for you</h2>
+            <div class="pricing-toggle">
+                <button class="toggle-btn active">Monthly</button>
+                <button class="toggle-btn">Yearly</button>
+            </div>
+
+            <div class="pricing-plans">
+                <div class="plan">
+                    <h3>Basic Plan</h3>
+                    <p>Enjoy an extensive library of movies and shows, featuring a range of content.</p>
+                    <p class="price">$9.99/month</p>
+                    <a href="#" class="cta-button">Start Free Trial</a>
+                </div>
+                <div class="plan">
+                    <h3>Standard Plan</h3>
+                    <p>Access to a wider selection of movies and shows, including recent releases and exclusive
+                        content.</p>
+                    <p class="price">$12.99/month</p>
+                    <a href="#" class="cta-button">Start Free Trial</a>
+                </div>
+                <div class="plan">
+                    <h3>Premium Plan</h3>
+                    <p>Access to the widest selection of movies and shows, including new releases and offline
+                        viewing.</p>
+                    <p class="price">$14.99/month</p>
+                    <a href="#" class="cta-button">Start Free Trial</a>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <ul class="nav-links">
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#movies">Movies</a></li>
+                    <li><a href="#shows">Shows</a></li>
+                    <li><a href="#support">Support</a></li>
+                    <li><a href="#subscription">Subscription</a></li>
+                </ul>
+            </div>
+            <p>©2023 StreamVibe, All Rights Reserved</p>
+        </footer>
+
+        <script>
+            function toggleAnswer(number) {
+                const answer = document.getElementById('answer-' + number);
+                answer.style.display = (answer.style.display === 'block') ? 'none' : 'block';
+            }
+        </script>
+    </body>
+    </html>
+
+{% endblock %}

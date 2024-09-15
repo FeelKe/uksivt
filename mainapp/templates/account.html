@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<main style="margin-top: 150px">
+    <section class="account-section">
+        <div class="account-container-vertical">
+            <!-- Data Section -->
+            <div class="account-card-vertical">
+                <h3>Data</h3>
+                <div class="account-info">
+                    <p>View and manage your data usage and stored information on StreamVibe.</p>
+                    <a href="#" class="cta-button">Manage Data</a>
+                </div>
+            </div>
+
+            <!-- Favorites Section -->
+            <div class="account-card-vertical">
+                <h3>Favorites</h3>
+                <div class="account-info">
+                    <p>Manage your favorite shows, movies, and lists.</p>
+                    <a href="#" class="cta-button">View Favorites</a>
+                </div>
+            </div>
+
+            <!-- Privacy Section -->
+            <div class="account-card-vertical">
+                <h3>Privacy</h3>
+                <div class="account-info">
+                    <p>Adjust your privacy settings, manage permissions, and control how your data is shared.</p>
+                    <a href="#" class="cta-button">Privacy Settings</a>
+                </div>
+            </div>
+
+            <!-- Delete Account Section -->
+            <div class="account-card-vertical">
+                <h3>Delete Account</h3>
+                <div class="account-info">
+                    <p>Once you delete your account, there is no going back. Please be certain.</p>
+                    <button class="cta-button delete-button" onclick="confirmDelete()">Delete Account</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for delete confirmation -->
+    <div id="deleteModal" class="modal">
+        <div class="modal-content">
+            <p>Are you sure you want to delete your account? This action cannot be undone.</p>
+            <button class="cta-button" onclick="proceedDelete()">Yes, Delete</button>
+            <button class="cta-button" onclick="closeModal()">Cancel</button>
+        </div>
+    </div>
+
+</main>
+
+<script>
+    // Function to show the delete confirmation modal
+    function confirmDelete() {
+        document.getElementById('deleteModal').style.display = 'block';
+    }
+
+    // Function to hide the modal and cancel deletion
+    function closeModal() {
+        document.getElementById('deleteModal').style.display = 'none';
+    }
+
+    // Function to handle account deletion (this can be connected to backend logic)
+    function proceedDelete() {
+        alert('Your account has been deleted.');
+        closeModal();
+    }
+</script>
+
+</body>
+</html>
+{% endblock %}

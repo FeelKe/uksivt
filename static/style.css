@@ -1,0 +1,489 @@
+{% load static %}
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #222222;
+    color: #f5f5f5;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(34, 34, 34, 0.95);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    z-index: 1000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    width: 120px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links li a {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    position: relative;
+}
+
+.nav-links li a.active {
+    color: #fec72e;
+}
+
+.nav-links li a.active::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #fec72e;
+    bottom: -5px;
+    left: 0;
+}
+
+.nav-links li a:hover {
+    color: #fec72e;
+}
+
+
+.icons {
+    display: flex;
+    gap: 15px;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url("/static/images/static.png");
+
+
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.overlay {
+    text-align: center;
+    background-color: rgba(34, 34, 34, 0.8);
+    padding: 40px;
+    border-radius: 15px;
+}
+
+.play-icon img {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-button {
+    background-color: #fec72e;
+    padding: 15px 30px;
+    color: #222222;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: #e5b720;
+}
+
+.categories {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #222222;
+}
+
+.categories h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #f5f5f5;
+}
+
+.categories p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #646464;
+}
+
+.categories-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.category-card {
+    background-color: #333333;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.category-card:hover {
+    transform: scale(1.05);
+}
+
+.category-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.category-images img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.category-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #f5f5f5;
+}
+
+.category-title h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.category-title span {
+    font-size: 1.5rem;
+    color: #fec72e; /* Желтая стрелка */
+}
+
+/* Vertical Account Section */
+.account-container-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.account-card-vertical {
+    background-color: #333333;
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    text-align: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.account-card-vertical:hover {
+    transform: scale(1.05);
+}
+
+.account-card-vertical h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.account-info p {
+    margin-bottom: 20px;
+}
+
+/* Delete Button Specific Styles */
+.delete-button {
+    background-color: #e53935;
+    color: #f5f5f5;
+}
+
+.delete-button:hover {
+    background-color: #c62828;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(34, 34, 34, 0.95);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+}
+
+.modal-content {
+    text-align: center;
+}
+
+.modal-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Background Overlay for Modal */
+.modal::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none;
+}
+
+/* Devices Section */
+.devices {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #222222;
+    color: #f5f5f5;
+}
+
+.devices h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #f5f5f5;
+}
+
+.devices p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #646464;
+}
+
+.devices-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.device-card {
+    background-color: #333333;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.device-card img {
+    width: 50px;
+    margin-bottom: 15px;
+}
+
+.device-card:hover {
+    transform: scale(1.05);
+}
+
+.device-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.device-card p {
+    font-size: 1rem;
+    color: #f5f5f5;
+}
+
+/* New Styles for FAQ Section */
+.faq-section {
+    padding: 50px 0;
+    background-color: #222222;
+    text-align: center;
+}
+
+.faq-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #f5f5f5;
+}
+
+.faq-section p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #646464;
+}
+
+.faq-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background-color: #333333;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.faq-item:hover {
+    transform: scale(1.05);
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.faq-question h3 {
+    color: #f5f5f5;
+    margin: 0;
+}
+
+.faq-question span {
+    font-size: 1.5rem;
+    color: #fec72e;
+}
+
+.faq-answer {
+    color: #bdbdbd;
+    font-size: 1rem;
+}
+
+.faq-button {
+    background-color: #e53935;
+    padding: 10px 20px;
+    color: #f5f5f5;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 30px;
+    display: inline-block;
+}
+
+.faq-button:hover {
+    background-color: #c62828;
+}
+
+/* Toggle Icons */
+.toggle-icon {
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.faq-item .faq-answer {
+    display: none;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+.faq-item.active .toggle-icon {
+    transform: rotate(45deg);
+}
+
+/* New Styles for Pricing Section */
+.pricing-section {
+    padding: 50px 0;
+    background-color: #333333;
+    color: #f5f5f5;
+    text-align: center;
+}
+
+.pricing-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.pricing-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.toggle-btn {
+    background-color: #444444;
+    color: #f5f5f5;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.toggle-btn.active, .toggle-btn:hover {
+    background-color: #fec72e;
+    color: #222222;
+}
+
+.pricing-plans {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.plan {
+    background-color: #222222;
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.plan:hover {
+    transform: scale(1.05);
+}
+
+.plan h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #fec72e;
+}
+
+.plan p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.price {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #f5f5f5;
+}
