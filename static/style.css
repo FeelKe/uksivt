@@ -487,3 +487,169 @@ p {
     margin-bottom: 30px;
     color: #f5f5f5;
 }
+/* Общие стили для бокового меню */
+.sidebar-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Высота на весь экран */
+    background-color: #222222; /* Фон сайта */
+}
+
+.sidebar {
+    background-color: #222222; /* Фон темный */
+    padding: 40px 20px;
+    color: #f5f5f5;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px; /* Ограничение по ширине */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Тень */
+}
+
+/* Заголовок */
+.sidebar h2 {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    color: #f5f5f5;
+}
+
+/* Стили для списка меню */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.sidebar ul li {
+    margin-bottom: 25px; /* Отступ между пунктами меню */
+}
+
+.sidebar ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f5f5f5;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 15px 0;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    position: relative;
+    width: 100%; /* Кнопка растягивается по ширине контейнера */
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+    background-color: #333; /* Темный фон при наведении и активный элемент */
+    color: #fec72e; /* Жёлтый цвет для активного состояния и при ховере */
+}
+
+.sidebar ul li a.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fec72e; /* Жёлтая линия под активным пунктом */
+}
+
+/* Иконки */
+.sidebar ul li a i {
+    font-size: 1.5rem;
+    margin-right: 15px; /* Отступ от иконки до текста */
+}
+
+/* Пользовательская секция */
+.sidebar .user-section {
+    margin-top: 40px;
+}
+
+.sidebar .user-section ul li a {
+    color: #e53935; /* Красный цвет для кнопки выхода */
+}
+
+.sidebar .user-section ul li a:hover {
+    color: #c62828; /* Более тёмный красный при наведении */
+}
+
+/* Стили для иконок FontAwesome */
+.fa-user, .fa-tv, .fa-play-circle, .fa-closed-captioning, .fa-keyboard, .fa-sign-out-alt {
+    color: #f5f5f5; /* Белый цвет иконок */
+}
+
+.fa-sign-out-alt {
+    color: #e53935; /* Красная иконка для выхода */
+}
+/* Search Container */
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: #333333;
+    border-radius: 50px;
+    padding: 5px 15px;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+/* Секция подписки на весь экран */
+.fullscreen-plan {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Высота на весь экран */
+    background-color: #222222;
+}
+
+.large-plan {
+    background-color: #333333;
+    padding: 50px;
+    border-radius: 20px;
+    width: 50%;
+    max-width: 800px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.large-plan:hover {
+    transform: scale(1.05);
+}
+
+.large-plan h3 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fec72e;
+}
+
+.large-plan p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #f5f5f5;
+}
+
+.large-plan .price {
+    font-size: 3rem;
+    margin-bottom: 40px;
+}
+
+.large-button {
+    background-color: #fec72e;
+    padding: 20px 40px;
+    font-size: 1.5rem;
+    color: #222222;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.large-button:hover {
+    background-color: #e5b720;
+}
+
+
