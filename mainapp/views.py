@@ -15,3 +15,5 @@ def account(request):
 
 def list(request):
     return render(request, 'list.html')
+def accsettings(request):
+    return render(request, 'accsettings.html')

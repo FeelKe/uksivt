@@ -1,0 +1,149 @@
+{% extends "base.html" %}
+{% load static %}
+<style>
+    /* Общий стиль для контейнера настроек */
+.settings-container {
+    display: flex;
+    justify-content: center; /* Горизонтальное центрирование */
+    align-items: center; /* Вертикальное центрирование */
+    height: 100vh; /* Высота контейнера, чтобы элемент был по центру страницы */
+    padding: 0;
+
+}
+
+/* Стиль для каждого блока настроек */
+.settings-block {
+    background-color: #333333;
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 800px;
+    text-align: left;
+}
+
+.settings-block:hover {
+    transform: scale(1.02);
+}
+
+.settings-block h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #fec72e;
+}
+
+/* Стили для инпутов и чекбоксов */
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #444444;
+    color: #f5f5f5;
+    font-size: 1rem;
+}
+
+.checkbox {
+    margin-right: 10px;
+}
+
+/* Стиль для кнопок */
+.large-button {
+    background-color: #fec72e;
+    padding: 15px 30px;
+    color: #222222;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    display: block;
+    margin-top: 20px;
+}
+
+.large-button:hover {
+    background-color: #e5b720;
+}
+
+/* Стиль для кнопки удаления */
+.delete-button {
+    background-color: #e53935;
+    color: #f5f5f5;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    display: block;
+    margin-top: 20px;
+}
+
+.delete-button:hover {
+    background-color: #c62828;
+}
+</style>
+{% block content %}
+  <main class="settings-container">
+    <!-- Account Information Block -->
+    <div class="settings-block account-card-vertical" style="    margin-top: 100px;">
+        <h3>Информация аккаунта</h3>
+        <div class="account-info">
+            <p><strong>Имя:</strong></p>
+            <input type="text" class="input-field" value="John Doe">
+        </div>
+        <div class="account-info">
+            <p><strong>Никнейм:</strong></p>
+            <input type="text" class="input-field" value="@johndoe">
+        </div>
+        <div class="account-info">
+            <p><strong>Социальные сети:</strong></p>
+            <input type="text" class="input-field" placeholder="Добавить ссылку на соцсеть">
+        </div>
+    </div>
+
+    <!-- Privacy Settings Block -->
+    <div class="settings-block account-card-vertical">
+        <h3>Настройки приватности</h3>
+        <div class="account-info">
+            <input type="checkbox" id="show-profile" class="checkbox" checked>
+            <label for="show-profile">Показывать мой профиль другим пользователям</label>
+        </div>
+        <div class="account-info">
+            <input type="checkbox" id="email-notifications" class="checkbox">
+            <label for="email-notifications">Получать уведомления на почту</label>
+        </div>
+        <div class="account-info">
+            <input type="checkbox" id="two-factor-auth" class="checkbox">
+            <label for="two-factor-auth">Двухфакторная аутентификация</label>
+        </div>
+    </div>
+
+    <!-- Language Settings Block -->
+    <div class="settings-block account-card-vertical">
+        <h3>Язык</h3>
+        <div class="account-info">
+            <label for="default-language"><strong>Язык по умолчанию:</strong></label>
+            <select id="default-language" class="input-field">
+                <option value="ru" selected>Русский</option>
+                <option value="en">English</option>
+                <option value="es">Español</option>
+            </select>
+        </div>
+        <div class="account-info">
+            <label for="site-language"><strong>Язык интерфейса сайта:</strong></label>
+            <select id="site-language" class="input-field">
+                <option value="ru" selected>Русский</option>
+                <option value="en">English</option>
+                <option value="es">Español</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Account Actions Block -->
+    <div class="settings-block account-card-vertical">
+        <h3>Управление аккаунтом</h3>
+        <button class="large-button">Выйти</button>
+        <button class="delete-button large-button">Удалить аккаунт</button>
+    </div>
+</main>
+
+{% endblock %}
