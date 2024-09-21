@@ -1,0 +1,18 @@
+# Ignore Visual Studio temporary files, build results, and
+# build directories.
+*.vs/
+*.user
+*.suo
+*.vcxproj.user
+.vs/
+.vscode/
+bin/
+obj/
+
+# Rider/JetBrains IDE files
+.idea/
+
+# Ignore any other temporary files you don't need to commit:
+*.log
+*.tmp
+*.cache
